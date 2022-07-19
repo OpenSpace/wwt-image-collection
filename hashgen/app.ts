@@ -47,6 +47,9 @@ export async function main() {
     let contents = '';
     let files = readdirSync(version).filter((v) => lstatSync(`${version}/${v}`).isFile());
     for (let file of files) {
+      if (file === 'hash.md5') {
+        continue;
+      }
       contents = contents + await readWtml(`${version}/${file}`);
     }
 

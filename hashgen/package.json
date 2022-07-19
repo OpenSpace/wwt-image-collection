@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenSpace/wwt-image-collection.git"
+  },"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.6"
+  }
 }

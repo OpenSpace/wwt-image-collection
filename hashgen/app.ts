@@ -44,6 +44,8 @@ export async function main() {
     process.exit(-1);
   }
 
+  console.log(new Date());
+
   const token = existsSync('token.txt') ? readFileSync('token.txt').toString() : '';
   let web = new WebClient(token.trim());
 
@@ -70,7 +72,6 @@ export async function main() {
       oldHash = readFileSync(path).toString();
     }
 
-    console.log(hash, oldHash);
     if (hash !== oldHash) {
       console.log(`Writing new hash ${hash} over old ${oldHash}`);
       writeFileSync(path, hash);

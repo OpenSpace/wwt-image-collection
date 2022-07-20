@@ -8,7 +8,7 @@ async function readWtml(uri: string): Promise<string> {
   // The URI is either a file (for one of the root files) or a URL, so we gotta check
   // which it is
   let isFile = existsSync(uri) && lstatSync(uri).isFile();
-  console.log(`Reading ${uri}: ${isFile ? 'File' : 'URL'}`);
+  console.log(`Reading ${isFile ? 'File' : 'URL'}:  ${uri}`);
 
   // Load the content of the URI
   let content = isFile ?
@@ -45,7 +45,7 @@ export async function main() {
   }
 
   const token = existsSync('token.txt') ? readFileSync('token.txt').toString() : '';
-  let web = new WebClient(token);
+  let web = new WebClient(token.trim());
 
   // Filter all of the contents of the directory that are not numbers
   let versions = readdirSync('.').filter((v) => Number(v));

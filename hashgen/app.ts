@@ -44,8 +44,6 @@ export async function main() {
     process.exit(-1);
   }
 
-  console.log(new Date());
-
   const token = existsSync('token.txt') ? readFileSync('token.txt').toString() : '';
   let web = new WebClient(token.trim());
 

@@ -7,12 +7,19 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OpenSpace/wwt-image-collection.git"
-  },"scripts": {
+  },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.0.6"
+    "@types/node": "^18.0.6",
+    "@types/xml2js": "^0.4.11",
+    "node-fetch": "^3.2.9",
+    "xml2js": "^0.4.23"
+  },
+  "dependencies": {
+    "@slack/web-api": "^6.7.2"
   }
 }

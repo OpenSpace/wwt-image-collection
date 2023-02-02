@@ -11,4 +11,5 @@
   <Folder Name="NOAO Studies" Url="http://www.worldwidetelescope.org/wwtweb/catalog.aspx?W=studiesnoao" Group="Explorer" Searchable="True" Type="Sky" Thumbnail="http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=noao" />
   <Folder Name="Gemini Studies" Url="http://www.worldwidetelescope.org/wwtweb/catalog.aspx?W=geministudies" Group="Explorer" Searchable="True" Type="Sky" Thumbnail="http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=geminiobservatory" />
   <Folder Name="JWST" Url="http://www.worldwidetelescope.org/wwtweb/catalog.aspx?W=jwst" Group="JWST" Thumbnail="http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jwst" />
+  <Folder Name="European Southern Observatory (ESO)" Url="http://www.worldwidetelescope.org/wwtweb/catalog.aspx?W=eso" Group="Explorer" Searchable="True" Thumbnail="http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=jwst" />
 </Folder>

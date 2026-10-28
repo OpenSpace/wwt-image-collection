@@ -96,3 +96,23 @@ export async function main() {
     }
   }
 }
+
+const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Run the update check repeatedly on a fixed interval, keeping the process alive.
+export async function runForever(intervalMs: number): Promise<void> {
+  console.log(`WWT Image Collection Update: polling every ${Math.round(intervalMs / 1000)}s`);
+  for (;;) {
+    const started = Date.now();
+    try {
+      await main();
+    } catch (err) {
+      // Transient failure (e.g. a catalog fetch error): log and retry on the next tick
+      // instead of crashing the process.
+      console.error('WWT Image Collection Update: check failed:', err);
+    }
+    const waitMs = Math.max(0, intervalMs - (Date.now() - started));
+    console.log(`WWT Image Collection Update: next check in ${Math.round(waitMs / 1000)}s`);
+    await sleep(waitMs);
+  }
+}
